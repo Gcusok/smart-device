@@ -1,0 +1,144 @@
+.footer {
+  background-color: $color-black-pearl;
+  color: $color-default-white;
+}
+
+.footer__wreapper {
+  display: flex;
+  padding: 50px 0 55px 0;
+
+  @media (max-width: $vp-770) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $vp-320) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer__logo-social {
+  display: flex;
+  flex-direction: column;
+  margin-right: 160px;
+
+  @media (max-width: $vp-770) {
+    margin: 0;
+    margin-bottom: 35px;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1/-1;
+  }
+
+  @media (max-width: $vp-320) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 30px;
+
+  @media (max-width: $vp-770) {
+    margin: 0;
+  }
+
+  @media (max-width: $vp-320) {
+    width: 215px;
+    height: 55px;
+    margin-bottom: 15px;
+  }
+}
+
+.footer__social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  gap: 15px 15px;
+}
+
+.footer__social-link {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.footer__sections-wrapper,
+.footer__address-wrapper {
+  padding-top: 5px;
+}
+
+.footer__sections-wrapper {
+  margin-right: 30px;
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $roboto-regular;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer__sections-list,
+.footer_address-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: $pt-mono-regular;
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 16px;
+  color: $color-transparent-white-07;
+}
+
+.footer-section-link,
+.footer__address-link {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.footer__sections-list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 30px;
+  max-width: 470px;
+
+  @media (max-width: $vp-770) {
+    max-width: 220px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer_address-list {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $vp-770) {
+    max-width: 320px;
+  }
+}
+
+.footer__address-item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.footer__address-text {
+  font-style: normal;
+  margin: 0;
+}
+
+.footer__button {
+  display: none;
+}

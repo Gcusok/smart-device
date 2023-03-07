@@ -1,0 +1,59 @@
+.header {
+  font-family: $pt-mono-regular;
+  background: $blue-to-right;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-default-white;
+  position: fixed;
+  width: 100vw;
+
+  @media(max-width: $vp-770) {
+    position: absolute;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 30px 0 35px 0;
+
+  @media(max-width: $vp-770) {
+    padding: 20px 0 25px 0;
+  }
+
+  @media(max-width: $vp-320) {
+    padding: 15px 0 20px 0;
+  }
+}
+
+.header__logo {
+  margin-right: 160px;
+
+  @media(max-width: $vp-770) {
+    margin: 0;
+  }
+
+  @media(max-width: $vp-320) {
+    margin-right: 124px;
+  }
+}
+
+.header__callback {
+  font-family: $roboto-regular;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-alice-blue;
+  padding: 10px 15px;
+  border: 1px solid $color-alice-blue;
+  border-radius: 3px;
+
+  @media (max-width: $vp-770) {
+    display: none;
+  }
+}
