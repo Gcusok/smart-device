@@ -1,11 +1,24 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+import {
+  iosVhFix
+} from './utils/ios-vh-fix';
+import {
+  initModals
+} from './modules/modals/init-modals';
+import {
+  Form
+} from './modules/form-validate/form';
 
+// Переменные модального окна
+const callbackButton = document.querySelector('[data-button=callback]');
+const modal = document.querySelector('[data-modal=feedback]');
+const overlayModal = document.querySelector('[data-close-modal]');
+const closeModal = document.querySelector('[data-close-modal=button]');
+
+const accordionButtons = document.querySelectorAll('[data-accordion-button=button]');
+const accordions = document.querySelectorAll('[data-sections-list=accordion]');
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
 
@@ -21,6 +34,35 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+  });
+
+  // Модальное окно
+  callbackButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    modal.classList.add('is-active');
+  });
+
+  overlayModal.onclick = () => {
+    modal.classList.remove('is-active');
+  };
+
+  closeModal.onclick = () => {
+    modal.classList.remove('is-active');
+  };
+
+  // Аккардион мобильной версии
+  accordionButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      accordions[index].classList.toggle('is-open');
+      button.classList.add('is-active');
+      let thisAccorion = accordions[index];
+
+      accordions.forEach((accordion) => {
+        if (accordion !== thisAccorion) {
+          accordion.classList.remove('is-open');
+        }
+      });
+    });
   });
 });
 

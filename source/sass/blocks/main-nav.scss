@@ -1,13 +1,14 @@
 .main-nav {
-  margin-right: 145px;
+  margin-right: 17%;
 
-  @media (max-width: $vp-770) {
+  @media (max-width: $vp-768) {
     margin: 0;
     margin-left: auto;
   }
 }
 
 .main-nav__list {
+  min-width: 480px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -23,7 +24,7 @@
     margin: 0;
   }
 
-  @media (max-width: $vp-770) {
+  @media (max-width: $vp-768) {
     margin-right: 20px;
   }
 }
@@ -31,7 +32,7 @@
 .main-nav__icon {
   margin-right: 15px;
 
-  @media (max-width: $vp-770) {
+  @media (max-width: $vp-768) {
     margin: 0;
   }
 }
@@ -43,7 +44,7 @@
   font-family: inherit;
   cursor: pointer;
 
-  @media (max-width: $vp-770) {
+  @media (max-width: $vp-768) {
     min-width: 40px;
     min-height: 40px;
     align-items: center;
@@ -52,7 +53,7 @@
 }
 
 .main-nav__link-text {
-  @media (max-width: $vp-770) {
+  @media (max-width: $vp-768) {
     display: none;
   }
 }

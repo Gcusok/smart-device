@@ -51,18 +51,24 @@
               </li>
             </ul>
           </nav>
-          <a class="header__callback" href="#">Заказать звонок</a>
+          <a class="header__callback" href="#" data-button="callback">Заказать звонок</a>
         </div>
       </div>
     </header>
     <main>
       <h1 class="visually-hidden">Магазин Электронных комплектующих Smart Device</h1>
       <section class="hero">
+        <!-- <picture>
+          <img src="img/Фон.jpg" alt="Изображение плат">
+        </picture> -->
         <div class="container">
           <div class="hero__wrapper">
             <h2 class="hero__title">Печатные платы</h2>
             <p class="hero__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="hero__link" href="#">Получить бесплатную консультацию</a>
+            <a class="hero__link" href="#">
+              <span class="hero__link-text">Получить бесплатную консультацию</span>
+              <span class="hero__link-text hero__link-text--mobil-only">бесплатная консультация</span>
+            </a>
           </div>
         </div>
       </section>
@@ -215,35 +221,35 @@
           </div>
           <div class="footer__sections-wrapper">
             <h3 class="footer__title">Разделы сайта</h3>
-            <button class="footer__button" type="button"></button>
-            <ul class="footer__sections-list">
-              <li class="footer-sections-item">
-                <a class="footer-section-link" href="#">О Компании</a>
+            <button class="footer__button" aria-label="Открыть аккардион" data-accordion-button="button" type="button"></button>
+            <ul class="footer__sections-list" data-sections-list="accordion">
+              <li class="footer__sections-item">
+                <a class="footer__section-link" href="#">О Компании</a>
               </li>
-              <li class="footer-sections-item">
-                <a class="footer-section-link" href="#">Продукты</a>
+              <li class="footer__sections-item">
+                <a class="footer__section-link" href="#">Продукты</a>
               </li>
-              <li class="footer-sections-item">
-                <a class="footer-section-link" href="#">Производство печатных плат</a>
+              <li class="footer__sections-item">
+                <a class="footer__section-link" href="#">Производство печатных плат</a>
               </li>
-              <li class="footer-sections-item">
-                <a class="footer-section-link" href="#">Монтаж печатных плат</a>
+              <li class="footer__sections-item">
+                <a class="footer__section-link" href="#">Монтаж печатных плат</a>
               </li>
-              <li class="footer-sections-item">
-                <a class="footer-section-link" href="#">Комплектующие</a>
+              <li class="footer__sections-item">
+                <a class="footer__section-link" href="#">Комплектующие</a>
               </li>
-              <li class="footer-sections-item">
-                <a class="footer-section-link" href="#">Доставка</a>
+              <li class="footer__sections-item">
+                <a class="footer__section-link" href="#">Доставка</a>
               </li>
-              <li class="footer-sections-item">
-                <a class="footer-section-link" href="#">Контакты</a>
+              <li class="footer__sections-item">
+                <a class="footer__section-link" href="#">Контакты</a>
               </li>
             </ul>
           </div>
           <div class="footer__address-wrapper">
             <h3 class="footer__title">Наш офис</h3>
-            <button class="footer__button" type="button"></button>
-            <ul class="footer_address-list">
+            <button class="footer__button" type="button" aria-label="Открыть аккардион" data-accordion-button="button"></button>
+            <ul class="footer__address-list" data-sections-list="accordion">
               <li class="footer__address-item">
                 <address>
                   <p class="footer__address-text">г. Мытищи, Олимпийский проспект, д.10</p>
@@ -266,7 +272,52 @@
   </div>
 
   <!-- Модалки -->
+  <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__title">Закажите звонок</p>
+        <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal="button">
+          <svg width="20" height="20">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form method="post">
+          <div class="modal__form-fields">
+            <input type="text" placeholder="Имя">
+            <input type="email" placeholder="Телефон">
+            <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+          </div>
+          <button class="modal__submit" type="submit">Отправить</button>
+          <div class="modal__checkbox">
+            <label>
+              <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked>
+              <span></span>
+              Я согласен на обработку персональных данных
+            </label>
+          </div>
 
+        </form>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg aria-hidden="true" focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <use href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
