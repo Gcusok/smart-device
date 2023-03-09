@@ -228,6 +228,10 @@
       &::after {
         transform: rotate(90deg);
       }
+
+      &.is-active::after {
+        display: none;
+      }
     }
   }
 }

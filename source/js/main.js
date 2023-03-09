@@ -54,12 +54,14 @@ window.addEventListener('DOMContentLoaded', () => {
   accordionButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
       accordions[index].classList.toggle('is-open');
-      button.classList.add('is-active');
+      button.classList.toggle('is-active');
+
       let thisAccorion = accordions[index];
 
-      accordions.forEach((accordion) => {
+      accordions.forEach((accordion, index) => {
         if (accordion !== thisAccorion) {
           accordion.classList.remove('is-open');
+          accordionButtons[index].classList.remove('is-active');
         }
       });
     });

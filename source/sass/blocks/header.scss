@@ -1,15 +1,18 @@
 .header {
   font-family: $pt-mono-regular;
-  background: $blue-to-right;
+  background: $blue-to-right, ;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: $color-default-white;
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100vw;
+  z-index: 3;
 
-  @media(max-width: $vp-768) {
-    position: absolute;
+  @media(max-width: $vp-1024) {
+    position: relative;
   }
 }
 
@@ -31,6 +34,7 @@
   margin-right: auto;
 
   @media(max-width: $vp-768) {
+    align-self: flex-start;
     margin: 0;
   }
 
