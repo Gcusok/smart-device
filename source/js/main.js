@@ -9,6 +9,7 @@ import {
 } from './modules/form-validate/form';
 
 // Переменные модального окна
+const body = document.body;
 const callbackButton = document.querySelector('[data-button=callback]');
 const modal = document.querySelector('[data-modal=feedback]');
 const overlayModal = modal.querySelector('[data-close-modal]');
@@ -44,15 +45,18 @@ window.addEventListener('DOMContentLoaded', () => {
   callbackButton.addEventListener('click', (evt) => {
     evt.preventDefault();
     modal.classList.add('is-active');
+    body.classList.add('scroll-lock');
     modalInputName.focus();
   });
 
   overlayModal.onclick = () => {
     modal.classList.remove('is-active');
+    body.classList.remove('scroll-lock');
   };
 
   closeModal.onclick = () => {
     modal.classList.remove('is-active');
+    body.classList.remove('scroll-lock');
   };
 
   // Маска поля телефона
