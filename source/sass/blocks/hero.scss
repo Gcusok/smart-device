@@ -4,122 +4,135 @@
   font-family: $roboto-regular;
   position: relative;
 
+  margin-bottom: 120px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
+
   img {
     position: absolute;
     z-index: 1;
     top: -18px;
     left: 0;
     width: 100%;
-    height: 102%;
+    height: 103%;
     object-fit: cover;
+  }
 
-    @media (max-width: $vp-1024) {
-      height: 133vh;
+  &__wrapper {
+    padding: 185px 0 280px 125px;
+    position: relative;
+    z-index: 2;
+
+    @include vp-1023 {
+      padding: 80px 0 205px 0;
     }
 
-    @media (max-width: $vp-768) {
-      height: 158vh;
+    @include vp-767 {
+      padding-bottom: 190px;
     }
   }
-}
 
-.hero__wrapper {
-  padding: 185px 0 295px 140px;
-  position: relative;
-  z-index: 2;
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
 
-  @media (max-width: $vp-1024) {
-    padding: 80px 0 205px 0;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    @include vp-1023 {
+      margin-bottom: 20px;
+
+      font-size: 64px;
+      line-height: 75px;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 42px;
+    }
   }
 
-  @media (max-width: $vp-768) {
-    padding-bottom: 190px;
-  }
-}
+  &__text {
+    margin: 0;
+    margin-bottom: 48px;
+    max-width: 685px;
 
-.hero__title {
-  margin: 0;
-  margin-bottom: 40px;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 94px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-
-  @media (max-width: $vp-1024) {
-    font-size: 64px;
-    line-height: 75px;
-  }
-
-  @media (max-width: $vp-768) {
-    font-size: 36px;
-    line-height: 42px;
-  }
-}
-
-.hero__text {
-  margin: 0;
-  margin-bottom: 40px;
-  font-family: $pt-mono-regular;
-  font-weight: 400px;
-  font-size: 22px;
-  line-height: 34px;
-  max-width: 685px;
-
-  @media (max-width: $vp-1024) {
+    font-family: $pt-mono-regular;
+    font-weight: 400px;
     font-size: 22px;
     line-height: 34px;
-    max-width: 670px;
+
+    @include vp-1023 {
+      max-width: 670px;
+      margin-bottom: 37px;
+
+      position: relative;
+      top: -19px;
+
+      font-size: 22px;
+      line-height: 34px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 22px;
+      max-width: 271px;
+    }
   }
 
-  @media (max-width: $vp-768) {
-    font-size: 14px;
-    line-height: 22px;
-    max-width: 271px;
-  }
-}
+  &__link {
+    display: block;
+    max-width: 410px;
+    margin: 0;
+    padding: 15px 25px;
 
-.hero__link {
-  display: block;
-  max-width: 410px;
-  margin: 0;
-  padding: 15px 25px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: inherit;
+    border-radius: 3px;
 
-  font-family: inherit;
-  font-weight: 700;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: inherit;
-  border-radius: 3px;
+    background-color: $color-deep-sky-blue;
+    cursor: pointer;
 
-  background-color: $color-deep-sky-blue;
-  cursor: pointer;
+    @include vp-1023 {
+      margin-left: 45px;
+      padding-bottom: 19px;
+    }
 
-  @media (max-width: $vp-1024) {
-    margin-left: 20px;
-  }
-
-  @media (max-width: $vp-768) {
-    max-width: 270px;
+    @include vp-767 {
+      max-width: 270px;
 
 
-    font-size: 14px;
-    line-height: 16px;
-  }
-}
-
-.hero__link-text {
-  &--mobil-only {
-    display: none;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
-  @media (max-width: $vp-768) {
-    display: none;
-
+  &__link-text {
     &--mobil-only {
-      display: block;
+      display: none;
+    }
+
+    @include vp-767 {
+      display: none;
+
+      &--mobil-only {
+        display: block;
+      }
     }
   }
 }

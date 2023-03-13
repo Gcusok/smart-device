@@ -9,6 +9,14 @@
   font-size: 20px;
   line-height: 30px;
 
+  @include vp-1023 {
+    padding: 60px 0 75px 0;
+  }
+
+  @include vp-767 {
+    padding: 50px 0 86px 0;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 50px;
@@ -16,7 +24,13 @@
     font-size: 36px;
     line-height: 51px;
 
-    @media (max-width: $vp-768) {
+    @include vp-1023 {
+      margin-bottom: 42px;
+
+      line-height: 46px
+    }
+
+    @include vp-767 {
       display: none;
       margin-bottom: 40px;
     }
@@ -25,7 +39,7 @@
   &__title--mobil-only {
     display: none;
 
-    @media (max-width: $vp-768) {
+    @include vp-767 {
       display: block;
       max-width: 270px;
     }
@@ -42,8 +56,9 @@
 
       list-style: none;
 
-      @media (max-width: $vp-1024) {
+      @include vp-1023 {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
     }
 
@@ -64,23 +79,28 @@
       text-decoration: none;
       color: inherit;
 
-      padding: 50px 80px 50px 30px;
+      padding: 50px 80px 50px 40px;
 
-      @media (max-width: $vp-1024) {
+      @include vp-1023 {
         min-height: 250px;
 
-        padding: 40px 60px 155px 45px;
+        padding: 40px 60px 150px 45px;
       }
     }
 
     img {
       width: 100%;
+      height: 100%;
 
       position: absolute;
       top: 0;
       left: 0;
 
       z-index: 1;
+
+      @include vp-767 {
+        height: 100%;
+      }
 
     }
 
@@ -89,7 +109,7 @@
 
       max-width: 180px;
 
-      @media (max-width: $vp-1024) {
+      @include vp-1023 {
         max-width: 150px;
       }
     }

@@ -6,12 +6,14 @@
     display: flex;
     padding: 50px 0 55px 0;
 
-    @media (max-width: $vp-1024) {
+    @include vp-1023 {
       display: grid;
       grid-template-columns: repeat(2, auto);
+      justify-content: space-between;
+      padding-bottom: 50px;
     }
 
-    @media (max-width: $vp-768) {
+    @include vp-767 {
       display: grid;
       grid-template-columns: 1fr;
       padding: 35px 0;
@@ -36,7 +38,7 @@
     flex-direction: column;
     margin-right: 160px;
 
-    @media (max-width: $vp-1024) {
+    @include vp-1023 {
       grid-column: 1/-1;
       margin: 0;
       flex-direction: row;
@@ -44,7 +46,7 @@
       margin-bottom: 35px;
     }
 
-    @media (max-width: $vp-768) {
+    @include vp-767 {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,11 +56,11 @@
   &__logo {
     margin-bottom: 30px;
 
-    @media (max-width: $vp-1024) {
+    @include vp-1023 {
       margin: 0;
     }
 
-    @media (max-width: $vp-375) {
+    @include vp-767 {
       width: 215px;
       height: 55px;
       margin-bottom: 15px;
@@ -68,10 +70,15 @@
   &__social-list {
     margin: 0;
     padding: 0;
+    padding-left: 10px;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 40px);
     gap: 15px 15px;
+
+    @include vp-1023 {
+      padding: 0;
+    }
   }
 
   &__social-link {
@@ -82,24 +89,27 @@
 
   &__sections-wrapper,
   &__address-wrapper {
-    padding-top: 5px;
 
-    @media (max-width: $vp-768) {
+    @include vp-767 {
       padding-top: 20px;
       position: relative;
     }
   }
 
   &__sections-wrapper {
-    margin-right: 30px;
+    margin-right: auto;
 
-    @media (max-width: $vp-1024) {
+    @include vp-1023 {
       margin: 0;
     }
 
-    @media(max-width: $vp-768) {
+    @include vp-767 {
       padding-bottom: 5px;
     }
+  }
+
+  &__address-wrapper {
+    max-width: 320px;
   }
 
   &__title {
@@ -113,7 +123,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    @media (max-width: $vp-768) {
+    @include vp-767 {
       margin-bottom: 15px;
     }
   }
@@ -130,7 +140,7 @@
     font-size: 16px;
     color: $color-transparent-white-07;
 
-    @media (max-width: $vp-768) {
+    @include vp-767 {
       max-height: auto;
       height: 0;
       overflow: hidden;
@@ -142,7 +152,7 @@
         width: 100vw;
         height: 1px;
 
-        left: -17px;
+        left: -25px;
         top: 0;
 
         background-color: $color-default-white;
@@ -162,29 +172,75 @@
     cursor: pointer;
   }
 
+  &__section-link {
+    display: block;
+  }
+
   &__sections-list {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px 30px;
     max-width: 470px;
 
-    @media (max-width: $vp-1024) {
-      grid-template-columns: auto;
+    display: grid;
+    grid-template-columns: 220px auto;
+    gap: 10px 30px;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
       max-width: 220px;
+
+    }
+  }
+
+  &__sections-item {
+    display: flex;
+
+    @include vp-1023 {
+
+      &--products {
+        order: 1;
+      }
+
+      &--production {
+        order: 2;
+        margin-bottom: -6px;
+      }
+
+      &--installation {
+        order: 4;
+      }
+
+      &--accessories {
+        order: 5;
+      }
+
+      &--delivery {
+        order: 6;
+      }
+
+      &--contacts {
+        order: 7;
+      }
     }
   }
 
   &__address-list {
     display: flex;
     flex-direction: column;
+    line-height: 25px;
 
-    @media (max-width: $vp-1024) {
+    @include vp-1023 {
       max-width: 320px;
     }
   }
 
   &__address-item {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+
+    order: 1;
+
+    &:first-child {
+      margin-bottom: 4px;
+    }
 
     &:last-child {
       margin: 0;
@@ -194,12 +250,13 @@
   &__address-text {
     font-style: normal;
     margin: 0;
+    max-width: 345px;
   }
 
   &__button {
     display: none;
 
-    @media (max-width: $vp-768) {
+    @include vp-767 {
       display: block;
       position: absolute;
       right: 15px;

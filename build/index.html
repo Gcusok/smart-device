@@ -51,7 +51,7 @@
               </li>
             </ul>
           </nav>
-          <a class="header__callback" href="#" data-button="callback">Заказать звонок</a>
+          <a class="header__callback" href="#" data-open-modal="feedback">Заказать звонок</a>
         </div>
       </div>
     </header>
@@ -59,24 +59,24 @@
       <h1 class="visually-hidden">Магазин Электронных комплектующих Smart Device</h1>
       <section class="hero">
         <picture>
-          <source media="(max-width: 1023px)"
+          <source media="(min-width: 1023px)"
             srcset="img/background/desktop/boards-desktop.webp 1x, img/background/desktop/boards-desktop@2x.webp 2x">
-          <source media="(max-width: 767px)"
+          <source media="(min-width: 767px)"
             srcset="img/background/tablet/boards-tablet.webp 1x, img/background/tablet/boards-tablet@2x.webp 2x">
-          <source media="(max-width: 320px)"
+          <source media="(min-width: 320px)"
             srcset="img/background/mobil/boards-mobil.webp 1x, img/background/mobil/boards-mobil@2x.webp 2x">
-          <source media="(max-width: 320px)"
+          <source media="(max-width: 767px)"
             srcset="img/background/mobil/boards-mobil.jpg 1x, img/background/mobil/boards-mobil@2x.jpg 2x">
-          <source media="(max-width: 768px)"
+          <source media="(max-width: 1023px)"
             srcset="img/background/tablet/boards-tablet.jpg 1x, img/background/tablet/boards-tablet@2x.jpg 2x">
-          <img src="img/background/desktop/boards-desktop.jpg" srcset="img/background/desktop/boards-desktop@2.jpg 2x"
-            alt="Изображение плат">
+          <img src="img/background/desktop/boards-desktop.jpg" width="1920" height="880"
+            srcset="img/background/desktop/boards-desktop@2.jpg 2x" alt="Изображение плат">
         </picture>
         <div class="container">
           <div class="hero__wrapper">
             <h2 class="hero__title">Печатные платы</h2>
             <p class="hero__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="hero__link" href="#">
+            <a class="hero__link" data-hero-button href="#">
               <span class="hero__link-text">Получить бесплатную консультацию</span>
               <span class="hero__link-text hero__link-text--mobil-only">бесплатная консультация</span>
             </a>
@@ -131,18 +131,36 @@
         </section>
         <!-- О нас -->
         <section class="about-us">
-          <div class="about-us__wrapper"></div>
-          <img src="" alt="">
-          <div class="about-us__text-wrapper">
-            <h2 class="about-us__title">О компании</h2>
-            <p class="about-us__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
-              мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
-            </p>
-            <p class="about-us__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
-              HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях
-              Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
-              клиентов крупнейшие Производители светотехники России.</p>
-            <button class="about-us__button" type="button">Подробнее</button>
+          <div class="about-us__wrapper">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="img/background/desktop/2022.webp 1x, img/background/desktop/2022@2x.webp 2x">
+              <img src="img/background/desktop/2022.png" srcset="img/background/desktop/2022@2x.png 2x" width="150"
+                height="320" alt="Год 2022">
+            </picture>
+            <div class="about-us__text-wrapper">
+              <h2 class="about-us__title">О компании</h2>
+              <div data-about-us-accordion="content" class="about-us__content-wrapper">
+                <p class="about-us__text">Мы поставляем электронные комплектующие, производим печатные платы и
+                  предоставляем
+                  мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+                </p>
+                <br>
+                <p class="about-us__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
+                  HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях
+                  Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
+                  клиентов крупнейшие Производители светотехники России.</p>
+                <br>
+                <p class="about-us__text">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000
+                  клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более
+                  14 офисов по всей стране и 20 городов присутствия.</p>
+                <br>
+                <p class="about-us__text">Мы стремимся к постоянному развитию и повышению уровня качества продукции,
+                  производимой внутри компании.
+                  Использование инновационных технологий помогает экономить деньги и время наших клиентов.</p>
+              </div>
+              <button class="about-us__button" data-about-us-accordion="button" type="button">Подробнее</button>
+            </div>
           </div>
         </section>
       </div>
@@ -153,78 +171,115 @@
           <p class="goods-services__title">Smart Device предлагает следующие товары и услуги</p>
           <p class="goods-services__title goods-services__title--mobil-only">Товары и услуги
             Smart Device</p>
-            <div class="goods-services__wrapper">
-               <ul>
-            <li>
-              <picture>
-                <img src="img/background/desktop/card-desktop.jpg" width="350" height="650"
-                  alt="Фрагмент производства печатных плат">
-              </picture>
-              <a href="#">
-                <p>Производство печатных
-                  плат</p>
-                <span>
-                  <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                    <use href="img/sprite.svg#arrow-right"></use>
-                  </svg>
-                </span>
-              </a>
-            </li>
-            <li>
-              <picture>
-                <img src="img/background/desktop/card-print-plat-desktop.jpg" width="350" height="650"
-                  alt="Фрагмент производства печатных плат">
-              </picture>
-              <a href="#">
-                <p>Монтаж печатных плат</p>
-                <span>
-                  <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                    <use href="img/sprite.svg#arrow-right"></use>
-                  </svg>
-                </span>
-              </a>
-            </li>
-            <li>
-              <picture>
-                <img src="img/background/desktop/card-light-items-desktop.jpg" width="350" height="650"
-                  alt="Фрагмент производства печатных плат">
-              </picture>
-              <a href="#">
-                <p>Комплектующие
-                  для&nbsp;светотехники</p>
-                <span>
-                  <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                    <use href="img/sprite.svg#arrow-right"></use>
-                  </svg>
-                </span>
-              </a>
-            </li>
-          </ul>
-            </div>
+          <div class="goods-services__wrapper">
+            <ul>
+              <li>
+                <picture>
+                  <source media="(min-width: 1023px)"
+                    srcset="img/background/desktop/card-desktop.webp 1x, img/background/desktop/card-desktop@2x.webp 2x">
+                  <source media="(min-width: 767px)"
+                    srcset="img/background/tablet/card-tablet.webp 1x, img/background/tablet/card-tablet@2x.webp 2x">
+                  <source media="(min-width: 320px)"
+                    srcset="img/background/mobil/card-mobil.webp 1x, img/background/mobil/card-mobil@2x.webp 2x">
+                  <source media="(max-width: 767px)"
+                    srcset="img/background/mobil/card-mobil.jpg 1x, img/background/mobil/card-mobil@2x.jpg 2x">
+                  <source media="(max-width: 1023px)"
+                    srcset="img/background/tablet/card-tablet.jpg 1x, img/background/tablet/card-tablet@2x.jpg 2x">
+                  <img src="img/background/desktop/card-desktop.jpg"
+                    srcset="img/background/desktop/card-desktop@2x.jpg 2x" width="350" height="650"
+                    alt="Фрагмент производства печатных плат">
+                </picture>
+                <a href="#">
+                  <p>Производство печатных
+                    плат</p>
+                  <span>
+                    <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <picture>
+                  <source media="(min-width: 1023px)"
+                    srcset="img/background/desktop/card-print-plat-desktop.webp 1x, img/background/desktop/card-print-plat-desktop@2x.webp 2x">
+                  <source media="(min-width: 767px)"
+                    srcset="img/background/tablet/card-print-plat-tablet.webp 1x, img/background/tablet/card-print-plat-tablet@2x.webp 2x">
+                  <source media="(min-width: 320px)"
+                    srcset="img/background/mobil/card-print-plat-mobil.webp 1x, img/background/mobil/card-print-plat-mobil@2x.webp 2x">
+                  <source media="(max-width: 767px)"
+                    srcset="img/background/mobil/card-print-plat-mobil.jpg 1x, img/background/mobil/card-print-plat-mobil@2x.jpg 2x">
+                  <source media="(max-width: 1023px)"
+                    srcset="img/background/tablet/card-print-plat-tablet.jpg 1x, img/background/tablet/card-print-plat-tablet@2x.jpg 2x">
+                  <img src="img/background/desktop/card-print-plat-desktop.jpg"
+                    srcset="img/background/desktop/card-print-plat-desktop@2x.jpg 2x" width="350" height="650"
+                    alt="Фрагмент монтажа печатных плат">
+                </picture>
+                <a href="#">
+                  <p>Монтаж печатных плат</p>
+                  <span>
+                    <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <picture>
+                  <source media="(min-width: 1023px)"
+                    srcset="img/background/desktop/card-light-items-desktop.webp 1x, img/background/desktop/card-light-items-desktop@2x.webp 2x">
+                  <source media="(min-width: 767px)"
+                    srcset="img/background/tablet/card-light-items-tablet.webp 1x, img/background/tablet/card-light-items-tablet@2x.webp 2x">
+                  <source media="(min-width: 320px)"
+                    srcset="img/background/mobil/card-light-items-mobil.webp 1x, img/background/mobil/card-light-items-mobil@2x.webp 2x">
+                  <source media="(max-width: 767px)"
+                    srcset="img/background/mobil/card-light-items-mobil.jpg 1x, img/background/mobil/card-light-items-mobil@2x.jpg 2x">
+                  <source media="(max-width: 1023px)"
+                    srcset="img/background/tablet/card-light-items-tablet.jpg 1x, img/background/tablet/card-light-items-tablet@2x.jpg 2x">
+                  <img src="img/background/desktop/card-light-items-desktop.jpg"
+                    srcset="img/background/desktop/card-light-items-desktop@2x.jpg 2x" width="350" height="650"
+                    alt="Фрагмент комплектующих для светотехники">
+                </picture>
+                <a href="#">
+                  <p>Комплектующие
+                    для&nbsp;светотехники</p>
+                  <span>
+                    <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                      <use href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
         </div>
       </section>
       <!-- Форма обратной связи -->
-      <section class="feedback">
+      <section data-feedback class="feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="container">
-          <svg aria-hidden="true" focusable="false" width="510" height="285" viewBox="0 0 510 285"
-            xmlns="http://www.w3.org/2000/svg">
-            <use href="img/sprite.svg#airplane"></use>
-          </svg>
+          <picture>
+            <source media="(min-width: 1024px)"
+              srcset="img/background/desktop/airplane.webp 1x, img/background/desktop/airplane@2x.webp 2x">
+            <img class="feedback__icon" width="510" height="285" src="img/background/desktop/airplane.png" srcset="img/background/desktop/airplane@2x.png 2x"
+              alt="изображение бумажного самолётика">
+          </picture>
           <div class="feedback__wrapper">
-            <p class="feedback__title">Остались вопросы? Задайте их нам!</p>
+            <p class="feedback__title">Остались&nbsp;вопросы? Задайте их нам!</p>
             <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
-            <form action="post">
+            <form action="post" data-form-validate>
               <div class="feedback__fields">
-                <input type="text" placeholder="Имя" required>
-                <input type="tel" placeholder="Телефон" data-input="phone" maxlength="14" required>
+                <input type="text" placeholder="Имя" data-validate-type="name" data-limitation="digit" data-required>
+                <input type="tel" placeholder="Телефон" data-validate-type="phone" data-required maxlength="10"
+                  data-required>
                 <textarea placeholder="Ваш вопрос"></textarea>
               </div>
               <button class="feedback__submit" type="submit">Задать вопрос</button>
               <div class="feedback__checkbox">
                 <label>
-                  <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked required>
+                  <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" data-form-validate checked
+                    data-required>
                   <span></span>
                   Я согласен на обработку персональных данных
                 </label>
@@ -282,23 +337,23 @@
               <li class="footer__sections-item">
                 <a class="footer__section-link" href="#">О Компании</a>
               </li>
-              <li class="footer__sections-item">
-                <a class="footer__section-link" href="#">Продукты</a>
-              </li>
-              <li class="footer__sections-item">
-                <a class="footer__section-link" href="#">Производство печатных плат</a>
-              </li>
-              <li class="footer__sections-item">
-                <a class="footer__section-link" href="#">Монтаж печатных плат</a>
-              </li>
-              <li class="footer__sections-item">
+              <li class="footer__sections-item footer__sections-item--accessories">
                 <a class="footer__section-link" href="#">Комплектующие</a>
               </li>
-              <li class="footer__sections-item">
+              <li class="footer__sections-item footer__sections-item--products">
+                <a class="footer__section-link" href="#">Продукты</a>
+              </li>
+              <li class="footer__sections-item footer__sections-item--delivery">
                 <a class="footer__section-link" href="#">Доставка</a>
               </li>
-              <li class="footer__sections-item">
+              <li class="footer__sections-item footer__sections-item--production">
+                <a class="footer__section-link" href="#">Производство печатных плат</a>
+              </li>
+              <li class="footer__sections-item footer__sections-item--contacts">
                 <a class="footer__section-link" href="#">Контакты</a>
+              </li>
+              <li class="footer__sections-item footer__sections-item--installation">
+                <a class="footer__section-link" href="#">Монтаж печатных плат</a>
               </li>
             </ul>
           </div>
@@ -340,16 +395,17 @@
             <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <form method="post">
+        <form method="post" data-form-validate>
           <div class="modal__form-fields">
-            <input type="text" placeholder="Имя" data-input-modal="name" data-input="name" autofocus required>
-            <input type="tel" placeholder="Телефон" maxlength="14" data-input="phone" required>
+            <input class="FocusLock" type="text" placeholder="Имя" data-input-modal="name" data-focus data-required>
+            <input type="tel" placeholder="Телефон" maxlength="10" data-validate-type="phone" data-validate-type="phone"
+              data-required>
             <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
           </div>
           <button class="modal__submit" type="submit">Отправить</button>
           <div class="modal__checkbox">
             <label>
-              <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked required>
+              <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked data-required>
               <span></span>
               Я согласен на обработку персональных данных
             </label>

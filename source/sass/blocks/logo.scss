@@ -1,7 +1,8 @@
 
 .logo {
+  display: block;
 
-  @media (max-width: $vp-375) {
+  @include vp-767 {
     width: 35px;
     height: 35px;
   }
@@ -9,5 +10,6 @@
   &__icon {
     width: 215px;
     height: 55px;
+
   }
 }

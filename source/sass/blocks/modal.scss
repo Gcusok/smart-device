@@ -194,6 +194,8 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: $color-default-white;
+
+    cursor: pointer;
   }
 
   &__checkbox label {
