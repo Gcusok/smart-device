@@ -27,12 +27,12 @@
     @include vp-1023 {
       margin-bottom: 42px;
 
-      line-height: 46px
+      line-height: 46px;
     }
 
     @include vp-767 {
       display: none;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
   }
 
@@ -41,7 +41,10 @@
 
     @include vp-767 {
       display: block;
-      max-width: 270px;
+      max-width: 248px;
+
+      font-size: 28px;
+      line-height: 39px;
     }
   }
 
@@ -86,6 +89,14 @@
 
         padding: 40px 60px 150px 45px;
       }
+
+      @include vp-767 {
+        max-height: 250px;
+        padding: 30px 90px 170px 30px;
+
+        font-size: 18px;
+        line-height: 30px;
+      }
     }
 
     img {
@@ -101,7 +112,6 @@
       @include vp-767 {
         height: 100%;
       }
-
     }
 
     p {
@@ -127,6 +137,11 @@
       height: 60px;
 
       background-color: $color-deep-sky-blue;
+
+      @include vp-767 {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

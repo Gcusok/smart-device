@@ -50,6 +50,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      margin-bottom: 24px;
     }
   }
 
@@ -89,9 +91,8 @@
 
   &__sections-wrapper,
   &__address-wrapper {
-
     @include vp-767 {
-      padding-top: 20px;
+      padding-top: 22px;
       position: relative;
     }
   }
@@ -104,7 +105,7 @@
     }
 
     @include vp-767 {
-      padding-bottom: 5px;
+      padding-bottom: 6px;
     }
   }
 
@@ -125,6 +126,7 @@
 
     @include vp-767 {
       margin-bottom: 15px;
+      padding-right: 10px;
     }
   }
 
@@ -162,6 +164,7 @@
     &.is-open {
       transition: all $trans-default;
       height: auto;
+      padding-bottom: 9px;
     }
   }
 
@@ -187,7 +190,6 @@
       display: flex;
       flex-direction: column;
       max-width: 220px;
-
     }
   }
 
@@ -195,7 +197,6 @@
     display: flex;
 
     @include vp-1023 {
-
       &--products {
         order: 1;
       }
@@ -231,6 +232,11 @@
     @include vp-1023 {
       max-width: 320px;
     }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__address-item {
@@ -238,8 +244,16 @@
 
     order: 1;
 
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+
     &:first-child {
       margin-bottom: 4px;
+
+      @include vp-767 {
+        margin-bottom: 24px;
+      }
     }
 
     &:last-child {
@@ -259,8 +273,8 @@
     @include vp-767 {
       display: block;
       position: absolute;
-      right: 15px;
-      top: 20px;
+      right: 2px;
+      top: 22px;
 
       width: 15px;
       height: 15px;

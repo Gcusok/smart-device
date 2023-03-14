@@ -88,7 +88,7 @@
         <section class="advantages">
           <h2 class="visually-hidden">Приемущества</h2>
           <ul class="advantages__list">
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--min-height-more">
               <svg class="advantages__icon" aria-hidden="true" focusable="false" width="35" height="35"
                 xmlns="http://www.w3.org/2000/svg">
                 <use href="img/sprite.svg#watch"></use>
@@ -98,7 +98,7 @@
                 стоимость,
                 производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--min-height-more">
               <svg class="advantages__icon" aria-hidden="true" focusable="false" width="35" height="35"
                 xmlns="http://www.w3.org/2000/svg">
                 <use href="img/sprite.svg#hired"></use>
@@ -109,8 +109,8 @@
               </p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__icon" aria-hidden="true" focusable="false" width="35" height="35"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="advantages__icon advantages__icon--more-margin" aria-hidden="true" focusable="false"
+                width="35" height="35" xmlns="http://www.w3.org/2000/svg">
                 <use href="img/sprite.svg#detective"></use>
               </svg>
               <h3 class="advantages__title">Полная конфиденциальность</h3>
@@ -118,8 +118,8 @@
               </p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__icon" aria-hidden="true" focusable="false" width="35" height="35"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg class="advantages__icon advantages__icon--more-margin" aria-hidden="true" focusable="false"
+                width="35" height="35" xmlns="http://www.w3.org/2000/svg">
                 <use href="img/sprite.svg#tag"></use>
               </svg>
               <h3 class="advantages__title">Персонализация стоимости</h3>
@@ -145,16 +145,15 @@
                   предоставляем
                   мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
                 </p>
-                <br>
                 <p class="about-us__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
-                  HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях
+                  HOLGLITRONIC, REFOND. <br>Печатные платы и комплектующие Service Devices применяются на предприятиях
                   Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
                   клиентов крупнейшие Производители светотехники России.</p>
-                <br>
+
                 <p class="about-us__text">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000
                   клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более
                   14 офисов по всей стране и 20 городов присутствия.</p>
-                <br>
+
                 <p class="about-us__text">Мы стремимся к постоянному развитию и повышению уровня качества продукции,
                   производимой внутри компании.
                   Использование инновационных технологий помогает экономить деньги и время наших клиентов.</p>
@@ -216,7 +215,7 @@
                     alt="Фрагмент монтажа печатных плат">
                 </picture>
                 <a href="#">
-                  <p>Монтаж печатных плат</p>
+                  <p>Монтаж печатных&nbsp;плат</p>
                   <span>
                     <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
                       <use href="img/sprite.svg#arrow-right"></use>
@@ -262,29 +261,34 @@
           <picture>
             <source media="(min-width: 1024px)"
               srcset="img/background/desktop/airplane.webp 1x, img/background/desktop/airplane@2x.webp 2x">
-            <img class="feedback__icon" width="510" height="285" src="img/background/desktop/airplane.png" srcset="img/background/desktop/airplane@2x.png 2x"
-              alt="изображение бумажного самолётика">
+            <img class="feedback__icon" width="510" height="285" src="img/background/desktop/airplane.png"
+              srcset="img/background/desktop/airplane@2x.png 2x" alt="изображение бумажного самолётика">
           </picture>
           <div class="feedback__wrapper">
             <p class="feedback__title">Остались&nbsp;вопросы? Задайте их нам!</p>
             <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
-            <form action="post" data-form-validate>
-              <div class="feedback__fields">
-                <input type="text" placeholder="Имя" data-validate-type="name" data-limitation="digit" data-required>
-                <input type="tel" placeholder="Телефон" data-validate-type="phone" data-required maxlength="10"
-                  data-required>
-                <textarea placeholder="Ваш вопрос"></textarea>
-              </div>
-              <button class="feedback__submit" type="submit">Задать вопрос</button>
-              <div class="feedback__checkbox">
-                <label>
-                  <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" data-form-validate checked
-                    data-required>
-                  <span></span>
-                  Я согласен на обработку персональных данных
-                </label>
-              </div>
-            </form>
+            <div class="form-wrapper" data-form-validate>
+              <form method="post" action="https://echo.htmlacademy.ru">
+                <div class="feedback__fields">
+                  <input type="text" placeholder="Имя">
+                  <div class="field-wrapper" data-validate-type="phone" data-required
+                    data-message-base="Поле обязательно к заполнению">
+                    <input type="tel" placeholder="Телефон">
+                  </div>
+
+                  <textarea placeholder="Ваш вопрос"></textarea>
+                </div>
+                <button class="feedback__submit" type="submit">Задать вопрос</button>
+                <div class="feedback__checkbox" data-required data-validate-type="checkbox" data-message-base="Согласие обязательно">
+                  <label>
+                    <input class="visually-hidden" type="checkbox" name="agreement" value="Yes">
+                    <span class="control-mark"></span>
+                    Я согласен на обработку персональных данных
+                  </label>
+                </div>
+              </form>
+            </div>
+
           </div>
         </div>
       </section>
@@ -395,27 +399,32 @@
             <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <form method="post" data-form-validate>
-          <div class="modal__form-fields">
-            <input class="FocusLock" type="text" placeholder="Имя" data-input-modal="name" data-focus data-required>
-            <input type="tel" placeholder="Телефон" maxlength="10" data-validate-type="phone" data-validate-type="phone"
-              data-required>
-            <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
-          </div>
-          <button class="modal__submit" type="submit">Отправить</button>
-          <div class="modal__checkbox">
-            <label>
-              <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked data-required>
-              <span></span>
-              Я согласен на обработку персональных данных
-            </label>
-          </div>
+        <div class="form-wrapper" data-form-validate>
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <div class="modal__form-fields">
+              <input type="text" placeholder="Имя">
+              <div class="field-wrapper" data-validate-type="phone" data-required
+                data-message-base="Поле обязательно к заполнению">
+                <input type="tel" placeholder="Телефон">
+              </div>
+              <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <button class="modal__submit" type="submit">Отправить</button>
+            <div class="modal__checkbox" data-required data-validate-type="checkbox"
+              data-message-base="Согласие обязательно">
+              <label>
+                <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked data-required>
+                <span class="control-mark"></span>
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
 
-        </form>
+          </form>
+        </div>
+
       </div>
 
     </div>
-  </div>
   </div>
 
   <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">

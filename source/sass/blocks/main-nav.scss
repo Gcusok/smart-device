@@ -7,7 +7,13 @@
     margin-bottom: 12px;
   }
 
+  @include vp-767 {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
   &__list {
+    max-width: 550px;
     min-width: 480px;
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +23,12 @@
 
     @include vp-1023 {
       min-width: auto;
+    }
+
+    @include vp-767 {
+      justify-content: space-between;
+
+      min-width: 100px;
     }
   }
 
@@ -30,6 +42,10 @@
 
     @include vp-1023 {
       margin-right: 20px;
+    }
+
+    @include vp-767 {
+      margin: 0;
     }
   }
 
@@ -54,12 +70,9 @@
       align-items: center;
       justify-content: center;
     }
-
-
   }
 
   &__link-text {
-
     @include vp-1023 {
       display: none;
     }

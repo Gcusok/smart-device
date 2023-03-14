@@ -1,8 +1,8 @@
 .form {
-
   &__fields {
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
   }
 
   &__fields--feedback {
@@ -38,10 +38,6 @@
     padding: 25px 0 0 15px;
 
     font-family: inherit;
-  }
-
-  &__fields {
-    margin-bottom: 25px;
   }
 
   &__submit {
@@ -102,8 +98,8 @@
     transform: rotate(45deg);
   }
 
-  &__checkbox input:checked+span::before,
-  &__checkbox input:checked+span::after {
+  &__checkbox input:checked + span::before,
+  &__checkbox input:checked + span::after {
     content: "";
   }
 }

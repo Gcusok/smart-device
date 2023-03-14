@@ -59,8 +59,15 @@
     }
 
     @include vp-767 {
+      min-height: 325px;
       padding: 30px;
       padding-bottom: 35px;
+
+      &--min-height-more {
+        @include vp-767 {
+          min-height: 340px;
+        }
+      }
     }
   }
 
@@ -74,6 +81,18 @@
     margin-bottom: 20px;
 
     color: $color-deep-sky-blue;
+
+    @include vp-767 {
+      margin-bottom: 10px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &--more-margin {
+      @include vp-767 {
+        margin-bottom: 15px;
+      }
+    }
   }
 
   &__title {
