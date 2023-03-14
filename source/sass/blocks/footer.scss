@@ -36,7 +36,6 @@
   &__logo-social {
     display: flex;
     flex-direction: column;
-    margin-right: 160px;
 
     @include vp-1023 {
       grid-column: 1/-1;
@@ -98,7 +97,7 @@
   }
 
   &__sections-wrapper {
-    margin-right: auto;
+    margin: 0 auto;
 
     @include vp-1023 {
       margin: 0;

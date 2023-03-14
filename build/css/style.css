@@ -803,6 +803,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 25px;
 }
 
 .modal__form-fields input,
@@ -851,10 +852,6 @@ button,
   height: 155px;
   padding: 25px 0 0 15px;
   font-family: inherit;
-}
-
-.modal__form-fields {
-  margin-bottom: 25px;
 }
 
 .modal__submit {
@@ -1495,7 +1492,7 @@ button,
 }
 
 .main-nav {
-  margin-right: 147px;
+  margin: 0 auto;
 }
 
 .main-nav__list {
@@ -1565,7 +1562,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-right: 160px;
 }
 
 .footer__logo {
@@ -1593,7 +1589,7 @@ button,
 }
 
 .footer__sections-wrapper {
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .footer__address-wrapper {
