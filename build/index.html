@@ -267,18 +267,18 @@
           <div class="feedback__wrapper">
             <p class="feedback__title">Остались&nbsp;вопросы? Задайте их нам!</p>
             <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
-            <div class="form-wrapper" data-form-validate>
+            <div class="form-wrapper form-wrapper--feedback" data-form-validate>
               <form method="post" action="https://echo.htmlacademy.ru">
-                <div class="feedback__fields">
-                  <input type="text" name="name" placeholder="Имя">
+                <div class="form-wrapper__form-fields form-wrapper__form-fields--feedback">
+                  <input type="text" name="name" aria-label="Ввести имя" placeholder="Имя">
                   <div class="field-wrapper" data-validate-type="phone" data-required
                     data-message-base="Поле обязательно к заполнению">
-                    <input type="tel" name="phone" placeholder="Телефон">
+                    <input type="tel" name="phone" aria-label="Ввести номер телефона" placeholder="Телефон">
                   </div>
-                  <textarea placeholder="Ваш вопрос"></textarea>
+                  <textarea aria-label="Поле описания вопроса" placeholder="Ваш вопрос"></textarea>
                 </div>
-                <button class="feedback__submit" type="submit">Задать вопрос</button>
-                <div class="feedback__checkbox checkbox" data-required data-validate-type="checkbox"
+                <button class="form-wrapper__submit form-wrapper__submit--feedback" type="submit">Задать вопрос</button>
+                <div class="checkbox" data-required data-validate-type="checkbox"
                   data-message-base="Согласие обязательно">
                   <label>
                     <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked>
@@ -401,16 +401,16 @@
         </button>
         <div class="form-wrapper" data-form-validate>
           <form method="post" action="https://echo.htmlacademy.ru">
-            <div class="modal__form-fields">
-              <input type="text" name="name" placeholder="Имя">
+            <div class="form-wrapper__form-fields">
+              <input type="text" name="name" aria-label="Ввести имя"  placeholder="Имя">
               <div class="field-wrapper" data-validate-type="phone" data-required
                 data-message-base="Поле обязательно к заполнению">
-                <input type="tel" name="phone" placeholder="Телефон">
+                <input type="tel" name="phone" aria-label="Ввести номер телефона" placeholder="Телефон">
               </div>
-              <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+              <textarea name="question" id="question" aria-label="Поле описания вопроса" placeholder="Ваш вопрос"></textarea>
             </div>
-            <button class="modal__submit" type="submit">Отправить</button>
-            <div class="modal__checkbox checkbox checkbox--modal" data-required data-validate-type="checkbox"
+            <button class="form-wrapper__submit" type="submit">Отправить</button>
+            <div class="form-wrapper__checkbox checkbox checkbox--modal" data-required data-validate-type="checkbox"
               data-message-base="Согласие обязательно">
               <label>
                 <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked data-required>
