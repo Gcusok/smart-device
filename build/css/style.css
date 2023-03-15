@@ -1695,10 +1695,12 @@ button,
   font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 21px;
+  color: #041827;
 }
 
 .about-us {
   margin-bottom: 100px;
+  color: #041827;
   font-family: "PT Mono", "Courier New", monospace;
   line-height: 22px;
 }

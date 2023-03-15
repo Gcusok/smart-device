@@ -119,6 +119,7 @@
     font-family: $pt-mono-regular;
     font-size: 16px;
     line-height: 21px;
+    color: $color-black-pearl;
 
     @include vp-1023 {
       max-width: 239px;

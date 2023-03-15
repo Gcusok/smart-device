@@ -1,6 +1,8 @@
 .about-us {
   margin-bottom: 100px;
 
+  color: $color-black-pearl;
+
   @include vp-1023 {
     margin-bottom: 80px;
   }
