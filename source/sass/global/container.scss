@@ -2,14 +2,14 @@
   width: 100%;
   max-width: $vp-1920;
   margin: 0 auto;
-  padding: 0 350px;
+  padding: 0 115px;
 
   @include vp-1439 {
     padding: 0 32px;
   }
 
   @include vp-1023 {
-    padding: 0  50px;
+    padding: 0 50px;
   }
 
   @include vp-767 {

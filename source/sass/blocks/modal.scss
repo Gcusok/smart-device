@@ -179,11 +179,13 @@
   }
 
   &__submit {
+    margin-bottom: 20px;
+    padding: 15px 60px;
+    width: 100%;
+
     border: none;
     border-radius: 3px;
     background-color: $color-dark-black-perl;
-    margin-bottom: 20px;
-    padding: 15px 60px;
 
     font-family: $roboto-regular;
     font-size: 16px;
@@ -195,56 +197,10 @@
 
     cursor: pointer;
   }
-
-  &__checkbox label {
-    position: relative;
-    padding-left: 25px;
-
-    font-size: 14px;
-    line-height: 16px;
-    opacity: 0.8;
-  }
-
-  &__checkbox .control-mark {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 15px;
-    height: 15px;
-
-    border: solid 1px $color-default-white;
-    border-radius: 2px;
-  }
-
-  &__checkbox .control-markn::before,
-  &__checkbox .control-mark::after {
-    position: absolute;
-    width: 1px;
-    background-color: $color-default-white;
-  }
-
-  &__checkbox .control-mark::before {
-    top: 5px;
-    left: 3px;
-    height: 4px;
-    transform: rotate(-45deg);
-  }
-
-  &__checkbox span::after {
-    top: 3px;
-    left: 7px;
-    height: 7px;
-    transform: rotate(45deg);
-  }
-
-  &__checkbox input:checked + .control-mark::before,
-  &__checkbox input:checked + .control-mark::after {
-    content: "";
-  }
 }
 
 .modal form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }

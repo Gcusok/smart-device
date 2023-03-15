@@ -14,7 +14,7 @@
   font-family: "PT Mono";
 
   font-display: swap;
-  src: url("../../fonts/pt-mono-400.woff2") format("woff2"), url("../../fonts/pt-mono-400.woff") format("woff");
+  src: url("../fonts/pt-mono-400.woff2") format("woff2"), url("../fonts/pt-mono-400.woff") format("woff");
 }
 
 @font-face {
@@ -23,7 +23,7 @@
   font-family: "Roboto Condensed";
 
   font-display: swap;
-  src: url("../../fonts/robotocondensed-400.woff2") format("woff2"), url("../../fonts/robotocondensed-400.woff") format("woff");
+  src: url("../fonts/robotocondensed-400.woff2") format("woff2"), url("../fonts/robotocondensed-400.woff") format("woff");
 }
 
 @font-face {
@@ -32,5 +32,5 @@
   font-family: "Roboto Condensed";
 
   font-display: swap;
-  src: url("../../fonts/robotocondensed-700.woff2") format("woff2"), url("../../fonts/robotocondensed-700.woff") format("woff");
+  src: url("../fonts/robotocondensed-700.woff2") format("woff2"), url("../fonts/robotocondensed-700.woff") format("woff");
 }

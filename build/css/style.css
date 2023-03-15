@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: url("../../fonts/pt-mono-400.woff2") format("woff2"), url("../../fonts/pt-mono-400.woff") format("woff");
+  src: url("../fonts/pt-mono-400.woff2") format("woff2"), url("../fonts/pt-mono-400.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/robotocondensed-400.woff2") format("woff2"), url("../../fonts/robotocondensed-400.woff") format("woff");
+  src: url("../fonts/robotocondensed-400.woff2") format("woff2"), url("../fonts/robotocondensed-400.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/robotocondensed-700.woff2") format("woff2"), url("../../fonts/robotocondensed-700.woff") format("woff");
+  src: url("../fonts/robotocondensed-700.woff2") format("woff2"), url("../fonts/robotocondensed-700.woff") format("woff");
 }
 
 *,
@@ -632,7 +632,7 @@ button,
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 350px;
+  padding: 0 115px;
 }
 
 .btn {
@@ -692,7 +692,7 @@ button,
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -792,7 +792,7 @@ button,
   margin: 0;
   margin-bottom: 40px;
   max-width: 380px;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
 }
 
 .modal__form-fields {
@@ -855,11 +855,12 @@ button,
 }
 
 .modal__submit {
+  margin-bottom: 20px;
+  padding: 15px 60px;
+  width: 100%;
   border: none;
   border-radius: 3px;
   background-color: #041427;
-  margin-bottom: 20px;
-  padding: 15px 60px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -870,54 +871,6 @@ button,
   cursor: pointer;
 }
 
-.modal__checkbox label {
-  position: relative;
-  padding-left: 25px;
-  font-size: 14px;
-  line-height: 16px;
-  opacity: 0.8;
-}
-
-.modal__checkbox .control-mark {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  border: solid 1px #ffffff;
-  border-radius: 2px;
-}
-
-.modal__checkbox .control-markn::before,
-.modal__checkbox .control-mark::after {
-  position: absolute;
-  width: 1px;
-  background-color: #ffffff;
-}
-
-.modal__checkbox .control-mark::before {
-  top: 5px;
-  left: 3px;
-  height: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.modal__checkbox span::after {
-  top: 3px;
-  left: 7px;
-  height: 7px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.modal__checkbox input:checked + .control-mark::before,
-.modal__checkbox input:checked + .control-mark::after {
-  content: "";
-}
-
 .modal form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,6 +879,9 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .custom-input,
@@ -1444,7 +1400,7 @@ button,
 }
 
 .header {
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, rgb(4, 24, 39)), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, rgb(4, 24, 39) 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, rgb(4, 24, 39) 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1612,7 +1568,7 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   line-height: 22px;
   font-size: 16px;
@@ -1729,7 +1685,7 @@ button,
   margin: 0;
   margin-bottom: 48px;
   max-width: 685px;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400px;
   font-size: 22px;
   line-height: 34px;
@@ -1825,14 +1781,14 @@ button,
 .advantages__text {
   margin: 0;
   max-width: 505px;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-size: 16px;
   line-height: 21px;
 }
 
 .about-us {
   margin-bottom: 100px;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
   line-height: 22px;
 }
 
@@ -1963,6 +1919,8 @@ button,
 .goods-services__wrapper img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -1995,7 +1953,7 @@ button,
 .feedback {
   position: relative;
   padding: 170px 0 250px 0;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -2043,7 +2001,7 @@ button,
   margin: 0;
   margin-bottom: 35px;
   max-width: 380px;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: "PT Mono", "Courier New", monospace;
 }
 
 .feedback__fields {
@@ -2109,6 +2067,7 @@ button,
 .feedback__submit {
   padding: 15px 60px 10px 60px;
   min-width: 265px;
+  max-height: 45px;
   border: none;
   border-radius: 3px;
   background-color: #041427;
@@ -2122,13 +2081,13 @@ button,
   cursor: pointer;
 }
 
-.feedback__checkbox {
+.checkbox {
   position: relative;
   top: 15px;
   left: -5px;
 }
 
-.feedback__checkbox label {
+.checkbox label {
   display: block;
   position: relative;
   padding-left: 25px;
@@ -2138,7 +2097,11 @@ button,
   opacity: 0.8;
 }
 
-.feedback__checkbox .control-mark {
+.checkbox--modal label {
+  max-width: 390px;
+}
+
+.checkbox__control-mark {
   position: absolute;
   left: 0;
   top: 6px;
@@ -2148,14 +2111,18 @@ button,
   border-radius: 2px;
 }
 
-.feedback__checkbox .control-mark::before,
-.feedback__checkbox .control-mark::after {
+.checkbox__control-mark--modal {
+  top: 0;
+}
+
+.checkbox__control-mark::before,
+.checkbox__control-mark::after {
   position: absolute;
   width: 1px;
   background-color: #ffffff;
 }
 
-.feedback__checkbox .control-mark::before {
+.checkbox__control-mark::before {
   top: 5px;
   left: 3px;
   height: 4px;
@@ -2164,7 +2131,7 @@ button,
   transform: rotate(-45deg);
 }
 
-.feedback__checkbox .control-mark::after {
+.checkbox__control-mark::after {
   top: 3px;
   left: 7px;
   height: 7px;
@@ -2173,8 +2140,8 @@ button,
   transform: rotate(45deg);
 }
 
-.feedback__checkbox input:checked + .control-mark::before,
-.feedback__checkbox input:checked + .control-mark::after {
+input:checked + .checkbox__control-mark::before,
+input:checked + .checkbox__control-mark::after {
   content: "";
 }
 
@@ -2499,7 +2466,7 @@ button,
     margin-right: 13%;
   }
 
-  .feedback__checkbox {
+  .checkbox {
     top: 10px;
     left: -2px;
   }
@@ -2599,6 +2566,10 @@ button,
 
   .footer__sections-wrapper {
     padding-bottom: 6px;
+  }
+
+  .footer__address-wrapper {
+    max-width: 100%;
   }
 
   .footer__title {
@@ -2842,7 +2813,7 @@ button,
     margin-bottom: 25px;
   }
 
-  .feedback__checkbox {
+  .checkbox {
     top: 2px;
     left: 5px;
   }

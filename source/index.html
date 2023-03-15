@@ -30,7 +30,7 @@
           <nav class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link">
+                <a class="main-nav__link" href="mailto:info@sd.ru">
                   <svg class="main-nav__icon" aria-hidden="true" focusable="false" width="20" height="20"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite.svg#email"></use>
@@ -270,19 +270,19 @@
             <div class="form-wrapper" data-form-validate>
               <form method="post" action="https://echo.htmlacademy.ru">
                 <div class="feedback__fields">
-                  <input type="text" placeholder="Имя">
+                  <input type="text" name="name" placeholder="Имя">
                   <div class="field-wrapper" data-validate-type="phone" data-required
                     data-message-base="Поле обязательно к заполнению">
-                    <input type="tel" placeholder="Телефон">
+                    <input type="tel" name="phone" placeholder="Телефон">
                   </div>
-
                   <textarea placeholder="Ваш вопрос"></textarea>
                 </div>
                 <button class="feedback__submit" type="submit">Задать вопрос</button>
-                <div class="feedback__checkbox" data-required data-validate-type="checkbox" data-message-base="Согласие обязательно">
+                <div class="feedback__checkbox checkbox" data-required data-validate-type="checkbox"
+                  data-message-base="Согласие обязательно">
                   <label>
                     <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked>
-                    <span class="control-mark"></span>
+                    <span class="checkbox__control-mark"></span>
                     Я согласен на обработку персональных данных
                   </label>
                 </div>
@@ -402,41 +402,24 @@
         <div class="form-wrapper" data-form-validate>
           <form method="post" action="https://echo.htmlacademy.ru">
             <div class="modal__form-fields">
-              <input type="text" placeholder="Имя">
+              <input type="text" name="name" placeholder="Имя">
               <div class="field-wrapper" data-validate-type="phone" data-required
                 data-message-base="Поле обязательно к заполнению">
-                <input type="tel" placeholder="Телефон">
+                <input type="tel" name="phone" placeholder="Телефон">
               </div>
               <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
             </div>
             <button class="modal__submit" type="submit">Отправить</button>
-            <div class="modal__checkbox" data-required data-validate-type="checkbox"
+            <div class="modal__checkbox checkbox checkbox--modal" data-required data-validate-type="checkbox"
               data-message-base="Согласие обязательно">
               <label>
                 <input class="visually-hidden" type="checkbox" name="agreement" value="Yes" checked data-required>
-                <span class="control-mark"></span>
+                <span class="checkbox__control-mark checkbox__control-mark--modal"></span>
                 Я согласен на обработку персональных данных
               </label>
             </div>
-
           </form>
         </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg aria-hidden="true" focusable="false" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-            <use href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
       </div>
     </div>
   </div>
