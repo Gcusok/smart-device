@@ -1,6 +1,11 @@
+const successWindow = document.querySelector('[data-modal="success"]');
+
 const baseSuccessCallback = () => {
   // event.preventDefault();
-
+  successWindow.classList.add('is-active');
+  setTimeout(() => {
+    successWindow.classList.remove('is-active');
+  }, '1000');
   // В данном колбеке бэкендер, либо разработчик при необходимости будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки или успешную отправку формы на сервер
 };
 
