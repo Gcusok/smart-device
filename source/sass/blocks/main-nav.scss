@@ -1,5 +1,9 @@
 .main-nav {
-  margin: 0 auto;
+  margin-right: 147px;
+
+  @include vp-1439 {
+    margin: 0 auto;
+  }
 
   @include vp-1023 {
     margin-left: auto;
@@ -34,7 +38,8 @@
 
   &__item {
     display: flex;
-    margin-right: 30px;
+    margin-right: 123px;
+    margin-bottom: 10px;
 
     &:last-child {
       margin: 0;
@@ -59,10 +64,19 @@
 
   &__link {
     display: flex;
-    min-width: 225px;
     color: inherit;
     font-family: inherit;
     cursor: pointer;
+
+    transition: $trans-default;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:active {
+      color: $color-deep-sky-blue;
+    }
 
     @include vp-1023 {
       min-width: 40px;

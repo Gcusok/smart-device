@@ -71,6 +71,14 @@
       overflow: hidden;
     }
 
+    br {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
+    }
+
     a {
       display: flex;
       flex-direction: column;
@@ -83,6 +91,21 @@
       color: inherit;
 
       padding: 50px 80px 50px 40px;
+
+      transition: $trans-default;
+
+      &:focus {
+        outline: 1px solid $color-default-white;
+        outline-offset: -2px;
+      }
+
+      &:hover {
+        font-size: 25px;
+      }
+
+      &:active {
+        color: $color-deep-sky-blue;
+      }
 
       @include vp-1023 {
         min-height: 250px;

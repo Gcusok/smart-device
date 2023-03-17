@@ -85,6 +85,9 @@
   &__social-link {
     display: flex;
     padding: 5px;
+
+    color: inherit;
+
     cursor: pointer;
   }
 
@@ -276,11 +279,11 @@
     @include vp-767 {
       display: block;
       position: absolute;
-      right: 2px;
-      top: 22px;
+      right: -25px;
+      top: 0;
 
-      width: 15px;
-      height: 15px;
+      width: 118%;
+      height: 100%;
 
       border: none;
       background-color: transparent;
@@ -290,8 +293,8 @@
       &::after {
         position: absolute;
         content: "";
-        top: 6px;
-        right: 0;
+        top: 26px;
+        right: 27px;
 
         width: 15px;
         height: 1px;
@@ -306,6 +309,20 @@
       &.is-active::after {
         display: none;
       }
+    }
+  }
+
+  &__section-link,
+  &__address-link,
+  &__social-link {
+    transition: $trans-default;
+
+    &:hover {
+      color: $color-deep-sky-blue;
+    }
+
+    &:active {
+      color: $color-cerulean;
     }
   }
 }

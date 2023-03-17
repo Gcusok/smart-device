@@ -23,10 +23,19 @@
     font-size: 14px;
     line-height: 16px;
     opacity: 0.8;
+
+    cursor: pointer;
+    user-select: none;
+    transition: $trans-default;
+
+    &:focus-within {
+      scale: 1.1;
+    }
   }
 
   &--modal {
     left: 13px;
+
     label {
       max-width: 390px;
     }

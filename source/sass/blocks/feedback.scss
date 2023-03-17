@@ -1,7 +1,5 @@
 .feedback {
-  position: relative;
-
-  padding: 170px 0 250px 0;
+  padding: 170px 0 230px 0;
 
   font-family: $pt-mono-regular;
   font-weight: 400;
@@ -9,10 +7,10 @@
   line-height: 22px;
   color: $color-default-white;
 
-  background: linear-gradient(139deg, $color-cerulean 0%, $color-cerulean 34%, $color-deep-sky-blue 34%, $color-deep-sky-blue 100%);
+  background: linear-gradient(139deg, $color-cerulean 0%, $color-cerulean 33.9%, $color-deep-sky-blue 33.9%, $color-deep-sky-blue 100%);
 
   @include vp-1023 {
-    padding: 50px 0 125px 0;
+    padding: 50px 0 105px 0;
     background: $color-deep-sky-blue;
   }
 
@@ -22,10 +20,14 @@
 
   &__icon {
     position: absolute;
-    top: 246px;
-    left: 18%;
+    top: 17%;
+    left: -108%;
 
     z-index: 1;
+
+    @include vp-1279 {
+      left: -90%;
+    }
 
     @include vp-1023 {
       display: none;
@@ -51,6 +53,7 @@
   &__title {
     margin: 0;
     margin-bottom: 9px;
+    margin-left: -5px;
 
     font-family: $roboto-regular;
     font-size: 36px;

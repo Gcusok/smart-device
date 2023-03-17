@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $color-popup;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -64,6 +64,8 @@
 
   &__content {
     position: relative;
+    top: 86px;
+    left: -8px;
 
     width: 500px;
     padding: 40px;
@@ -79,8 +81,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 16px;
+    right: 16px;
     z-index: 1;
 
     width: 40px;
@@ -126,7 +128,6 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 15px;
 
     font-family: $roboto-regular;
     font-size: 30px;

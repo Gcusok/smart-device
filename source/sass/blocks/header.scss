@@ -30,6 +30,11 @@
 
   &__logo {
     margin-right: auto;
+    transition: $trans-default;
+
+    &:hover {
+      scale: 1.1;
+    }
 
     @include vp-1023 {
       align-self: flex-start;
@@ -62,6 +67,17 @@
 
     border: 1px solid $color-alice-blue;
     border-radius: 3px;
+
+    transition: $trans-default;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:active {
+      background-color: $color-deep-sky-blue;
+      border: none;
+    }
 
     @include vp-1023 {
       display: none;

@@ -215,7 +215,7 @@
                     alt="Фрагмент монтажа печатных плат">
                 </picture>
                 <a href="#">
-                  <p>Монтаж печатных&nbsp;плат</p>
+                  <p>Монтаж <br> печатных плат</p>
                   <span>
                     <svg aria-hidden="true" focusable="false" width="10" height="10" xmlns="http://www.w3.org/2000/svg">
                       <use href="img/sprite.svg#arrow-right"></use>
@@ -258,26 +258,31 @@
       <section data-feedback class="feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="container">
-          <picture>
-            <source media="(min-width: 1024px)"
-              srcset="img/background/desktop/airplane.webp 1x, img/background/desktop/airplane@2x.webp 2x">
-            <img class="feedback__icon" width="510" height="285" src="img/background/desktop/airplane.png"
-              srcset="img/background/desktop/airplane@2x.png 2x" alt="изображение бумажного самолётика">
-          </picture>
+
           <div class="feedback__wrapper">
+            <picture>
+              <source media="(min-width: 1024px)"
+                srcset="img/background/desktop/airplane.webp 1x, img/background/desktop/airplane@2x.webp 2x">
+              <img class="feedback__icon" width="510" height="285" src="img/background/desktop/airplane.png"
+                srcset="img/background/desktop/airplane@2x.png 2x" alt="изображение бумажного самолётика">
+            </picture>
             <p class="feedback__title">Остались&nbsp;вопросы? Задайте их нам!</p>
             <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
             <div class="form-wrapper form-wrapper--feedback" data-form-validate>
-              <form method="post" action="https://echo.htmlacademy.ru">
+              <form method="post" action="https://echo.htmlacademy.ru" data-form>
                 <div class="form-wrapper__form-fields form-wrapper__form-fields--feedback">
-                  <input type="text" name="name" aria-label="Ввести имя" placeholder="Имя">
+                  <div class="field-wrapper" data-validate-type="text" data-required
+                    data-message-base="Поле обязательно к заполнению">
+                    <input type="text" name="name"
+                      aria-label="Ввести имя" placeholder="Имя">
+                  </div>
                   <div class="field-wrapper" data-validate-type="phone" data-required
                     data-message-base="Поле обязательно к заполнению">
                     <input type="tel" name="phone" aria-label="Ввести номер телефона" placeholder="Телефон">
                   </div>
                   <textarea aria-label="Поле описания вопроса" placeholder="Ваш вопрос"></textarea>
                 </div>
-                <button class="form-wrapper__submit form-wrapper__submit--feedback" type="submit">Задать вопрос</button>
+                <button class="form-wrapper__submit form-wrapper__submit--feedback" data-submit-button type="submit">Задать вопрос</button>
                 <div class="checkbox" data-required data-validate-type="checkbox"
                   data-message-base="Согласие обязательно">
                   <label>
@@ -288,7 +293,6 @@
                 </div>
               </form>
             </div>
-
           </div>
         </div>
       </section>
@@ -395,21 +399,25 @@
         <p class="modal__title">Закажите звонок</p>
         <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal="button">
-          <svg width="20" height="20">
+          <svg width="40" height="40">
             <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <div class="form-wrapper" data-form-validate>
-          <form method="post" action="https://echo.htmlacademy.ru">
+          <form action="https://echo.htmlacademy.ru" method="post">
             <div class="form-wrapper__form-fields">
-              <input type="text" name="name" aria-label="Ввести имя"  placeholder="Имя">
+              <div class="field-wrapper" data-validate-type="text" data-required
+                data-message-base="Поле обязательно к заполнению">
+                <input type="text" name="name" aria-label="Ввести имя" placeholder="Имя">
+              </div>
               <div class="field-wrapper" data-validate-type="phone" data-required
                 data-message-base="Поле обязательно к заполнению">
                 <input type="tel" name="phone" aria-label="Ввести номер телефона" placeholder="Телефон">
               </div>
-              <textarea name="question" id="question" aria-label="Поле описания вопроса" placeholder="Ваш вопрос"></textarea>
+              <textarea name="question" id="question" aria-label="Поле описания вопроса"
+                placeholder="Ваш вопрос"></textarea>
             </div>
-            <button class="form-wrapper__submit" type="submit">Отправить</button>
+            <button class="form-wrapper__submit" data-submit-button type="submit">Отправить</button>
             <div class="form-wrapper__checkbox checkbox checkbox--modal" data-required data-validate-type="checkbox"
               data-message-base="Согласие обязательно">
               <label>
@@ -420,6 +428,19 @@
             </div>
           </form>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Форма успешно отправлена</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>

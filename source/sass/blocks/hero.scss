@@ -113,6 +113,17 @@
     background-color: $color-deep-sky-blue;
     cursor: pointer;
 
+    transition: $trans-default;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:active {
+      background-color: $color-black-pearl;
+      outline: 1px solid $color-alice-blue;
+    }
+
     @include vp-1023 {
       margin-left: 45px;
       padding-bottom: 19px;
