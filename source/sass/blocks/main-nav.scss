@@ -1,5 +1,5 @@
 .main-nav {
-  margin-right: 147px;
+  margin-right: 144px;
 
   @include vp-1439 {
     margin: 0 auto;
@@ -19,8 +19,9 @@
   &__list {
     max-width: 550px;
     min-width: 480px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -38,18 +39,8 @@
 
   &__item {
     display: flex;
-    margin-right: 123px;
-    margin-bottom: 10px;
 
     &:last-child {
-      margin: 0;
-    }
-
-    @include vp-1023 {
-      margin-right: 20px;
-    }
-
-    @include vp-767 {
       margin: 0;
     }
   }

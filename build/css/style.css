@@ -1379,17 +1379,17 @@ button,
 }
 
 .main-nav {
-  margin-right: 147px;
+  margin-right: 144px;
 }
 
 .main-nav__list {
   max-width: 550px;
   min-width: 480px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1399,8 +1399,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 123px;
-  margin-bottom: 10px;
 }
 
 .main-nav__item:last-child {
@@ -2156,6 +2154,7 @@ button,
 
 .checkbox--modal {
   left: 13px;
+  top: -4px;
 }
 
 .checkbox--modal label {
@@ -2259,7 +2258,8 @@ input:checked + .checkbox__control-mark::after {
 
 @media (max-width: 1279px) {
   .feedback__icon {
-    left: -90%;
+    left: -59%;
+    width: 300px;
   }
 }
 
@@ -2279,7 +2279,7 @@ input:checked + .checkbox__control-mark::after {
   .header__logo {
     -ms-flex-item-align: start;
     align-self: flex-start;
-    margin: 0;
+    margin: auto 0;
   }
 
   .header__callback {
@@ -2294,10 +2294,6 @@ input:checked + .checkbox__control-mark::after {
 
   .main-nav__list {
     min-width: auto;
-  }
-
-  .main-nav__item {
-    margin-right: 20px;
   }
 
   .main-nav__icon {
@@ -2412,7 +2408,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .hero__wrapper {
-    padding: 80px 0 205px 0;
+    padding: 79px 0 205px 0;
   }
 
   .hero__title {
@@ -2440,7 +2436,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .advantages__item {
-    max-width: 320px;
+    min-width: 320px;
     min-height: 360px;
     padding-right: 30px;
     padding-bottom: 0;
@@ -2451,11 +2447,11 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .advantages__icon--more-margin {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
   }
 
   .advantages__text {
-    max-width: 239px;
+    min-width: 239px;
   }
 
   .about-us {
@@ -2473,7 +2469,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .about-us__text {
-    max-width: 495px;
+    min-width: 495px;
     margin-bottom: 19px;
   }
 
@@ -2593,10 +2589,6 @@ input:checked + .checkbox__control-mark::after {
     -ms-flex-pack: justify;
     justify-content: space-between;
     min-width: 100px;
-  }
-
-  .main-nav__item {
-    margin: 0;
   }
 
   .logo {
@@ -2730,6 +2722,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .hero__wrapper {
+    padding-top: 80px;
     padding-bottom: 190px;
   }
 
@@ -2774,6 +2767,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .advantages__item {
+    min-width: 270px;
     min-height: 325px;
     padding: 30px;
     padding-bottom: 35px;
@@ -2795,6 +2789,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .advantages__text {
+    min-width: 210px;
     font-size: 14px;
     line-height: 19px;
   }
@@ -2813,6 +2808,7 @@ input:checked + .checkbox__control-mark::after {
   }
 
   .about-us__text {
+    min-width: 270px;
     margin-bottom: 19px;
     font-size: 14px;
     line-height: 19px;

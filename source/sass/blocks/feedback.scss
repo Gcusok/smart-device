@@ -26,7 +26,8 @@
     z-index: 1;
 
     @include vp-1279 {
-      left: -90%;
+      left: -59%;
+      width: 300px;
     }
 
     @include vp-1023 {
