@@ -1,5 +1,6 @@
 .main-nav {
   margin-right: 144px;
+  align-self: center;
 
   @include vp-1439 {
     margin: 0 auto;

@@ -16,7 +16,7 @@
 
   &__wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 30px 0 35px 0;
 
     @include vp-1023 {
@@ -49,8 +49,8 @@
 
   &__callback {
     position: relative;
-    top: -3px;
 
+    margin-top: 7px;
     margin-right: 60px;
     padding: 10px 15px;
     min-width: 160px;
